@@ -1,4 +1,6 @@
 import datetime
+from typing import TYPE_CHECKING
+
 from django.db import models
 
 # gives us Django's timezone-aware datetime object (actually pretty cool)
