@@ -1,6 +1,6 @@
 import datetime
-from typing import TYPE_CHECKING
 
+from django.contrib import admin
 from django.db import models
 
 # gives us Django's timezone-aware datetime object (actually pretty cool)
@@ -14,6 +14,11 @@ class Question(models.Model):
     def __str__(self):
         return self.question_text
 
+    @admin.display(
+        boolean=True,
+        ordering="pub_date",
+        description="Published recently?",
+    )
     def was_published_recently(self):
         now = timezone.now()
         # cool python syntax, but the current date should be in between one day ago and now
