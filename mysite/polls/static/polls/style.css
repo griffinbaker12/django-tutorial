@@ -1,0 +1,8 @@
+li a {
+    color: green;
+}
+
+body {
+    background: white url("images/django-background.png") no-repeat;
+    object-fit: cover; 
+}
